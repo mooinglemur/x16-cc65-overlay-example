@@ -6,9 +6,15 @@ SETLFS := $FFBA
 LOAD   := $FFD5
 
 .segment "ZEROPAGE"
-.segment "STARTUP"
-.segment "INIT"
-.segment "ONCE"
+
+; We don't need to declare these
+; and in fact we don't want ANY
+; asm code in these. Let's leave
+; these segments for C only
+; .segment "STARTUP"
+; .segment "INIT"
+; .segment "ONCE"
+
 .segment "CODE"
 
 ; symbols in C have a leading underscore on the asm side
