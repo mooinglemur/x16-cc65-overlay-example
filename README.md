@@ -2,9 +2,9 @@
 
 This is a simple example that mixes cc65/ca65 C and assembly lanugage in an unusual way.
 
-The linker config drops the (non-inclusive) end of the main program space down from $9F00 to $9000, and defines three new memory regions at $9000.
+The linker config drops the (non-inclusive) end of the main program space down from $9F00 to $9000, and defines three new overlapping memory regions at $9000.
 
-In addition to this, three pairs of segments are defined to live in the three new memory regions.  Due to the way that the cc65 linker (ld65) works, if you have overlapping memory regions that you wish to use in separate contexts for code and data, you must declare each of them in your linker config, and create separately-named segments for each individual use.
+In addition to this, a set of segments is defined to live in each of the three new memory regions.  Due to the way that the cc65 linker (ld65) works, if you have overlapping memory regions that you wish to use in separate contexts for code and data, you must declare each of them in your linker config, and create separately-named segments for each individual use.
 
 Those who write code for NES mappers will already be familiar with this, as well as those who have written cartridge and other code that needs to live in the X16's RAM and/or ROM banks.
 
