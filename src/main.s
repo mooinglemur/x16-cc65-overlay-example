@@ -142,6 +142,7 @@ message1:
 	; translated to PETSCII during assembly and compilation
 	.byte "Hello World!",13,10,0 ; we null-terminate our strings
 
+.segment "DATA"
 overlayfn:
 	.byte "overlay"
 overlaynum:
