@@ -24,7 +24,7 @@ overlayfunc := _overlay1func ; these three functions should all be in the same p
 .assert _overlay1func = _overlay2func, error, "Overlay functions aren't at the same address"
 .assert _overlay1func = _overlay3func, error, "Overlay functions aren't at the same address"
 
-.export _start
+.export _start ; called from main() in C :)
 
 _start:
 	; This file and the entry point is basically like a regular ca65 ASM project
