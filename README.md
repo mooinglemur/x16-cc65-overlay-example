@@ -10,7 +10,7 @@ Those who write code for NES mappers will already be familiar with this, as well
 
 However, this example mixes in the concept of calling C functions from assembly code.  Usually, things are done in reverse, where C calls asm functions, but there's nothing precluding going in the other direction if you're aware of how C calls work.
 
-Due to how C needs to initalize its own state, the entry point into C is via `main()` rather than an assembly function.
+Due to how C needs to initalize its own state, the entry point into this program is via `main()` in C rather than an assembly function.  We **must** allow C to initialize its state (mainly the call stack pointer) before we call any C functions.
 
 The `main()` in this example simply calls our assembly entry point, but it conveniently has an implicit call to the C library's init before calling our asm routine.
 
